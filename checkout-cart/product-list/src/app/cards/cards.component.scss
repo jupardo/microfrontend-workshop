@@ -1,0 +1,41 @@
+.root {
+  width: 100%;
+  max-width: 960px;
+  padding: 24px 16px;
+  margin: 24px auto;
+}
+
+.tile {
+  width: 100%;
+  padding: 16px 8px;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.card {
+  height: 80%;
+  width: 80%;
+  margin: 16px 8px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+  max-height: 150px;
+}
+
+.button {
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #F0F0F0;
+}

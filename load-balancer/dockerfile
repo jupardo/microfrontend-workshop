@@ -1,0 +1,12 @@
+FROM nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+COPY localizated-webpage-angular/dist/localizated-webpage-angular /app
+COPY localizated-webpage /next
+WORKDIR /next
+COPY wrapper_script.sh wrapper_script.sh
+RUN npm i -g yarn
+RUN yarn install
+EXPOSE 3000
+CMD ./wrapper_script.sh

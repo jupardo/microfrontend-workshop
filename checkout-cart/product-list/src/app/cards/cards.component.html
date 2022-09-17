@@ -1,0 +1,15 @@
+<div class="root">
+  <mat-grid-list [cols]="cols" >
+    <mat-grid-tile colspan="1" rowspan="1" class="tile"  *ngFor="let pokimon of pokemon">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title><span class="title">{{pokimon.name}}</span></mat-card-title>
+        </mat-card-header>
+        <img class="image" mat-card-image src="{{pokimon.image}}"/>
+        <mat-card-actions>
+          <button (click)="pokimon.onClick()" mat-button class="button">Favorito</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
